@@ -18,7 +18,7 @@ Fairy I/O Tumbler は Raspberry Pi Compute Module を搭載し、Raspbian Stretc
 
 ### 2. ライブラリ構成
 
-libmimixfe
+##### libmimixfe
 
 mimi(R) XFE の機能が実装されたライブラリです。Tumbler は 16 個のマイクから、最大 48kHz, 16bit, 16ch、1ch のスピーカーフィードバック信号、1ch の外部入力信号の合計 18ch の同期信号を取得することができます。この同期信号を利用し、ビームフォーミングや、エコーキャンセル、発話区間抽出などの前段信号処理を行うためのライブラリが libmimixfe です。
 
@@ -26,7 +26,7 @@ libmimixfe は、Tumbler のハードウェア層からの信号を入力とし�
 
 libmimixfe はバイナリライブラリの形式で提供されます。利用時には、他のライブラリが必要となりますので、libmimixfe のドキュメントを参照してください。
 
-libmimiio
+##### libmimiio
 
 libmimiio は mimi(R) WebSocket API Service を実装したクライアント通信ライブラリで、音声データを入力とし、mimi(R) クラウドに音声データを送信し、音声認識などの結果を得ることができるライブラリです。WebSocket による双方向通信を利用することで、リアルタイムの音声データの送信と結果の受信が可能となります。
 
