@@ -30,7 +30,7 @@ libmimixfe はバイナリライブラリの形式で提供されます。利用
 
 [libmimiio](https://github.com/FairyDevicesRD/libmimiio) は mimi(R) WebSocket API Service を実装したクライアント通信ライブラリで、音声データを入力とし、mimi(R) クラウドに音声データを送信し、音声認識などの結果を得ることができるライブラリです。WebSocket による双方向通信を利用することで、リアルタイムの音声データの送信と結果の受信が可能となります。
 
-libmimixfe はオープンソースとして提供されます。ビルド時には、Poco C++ library などが必要となります。Poco はプレビルドバイナリが github 上で公開されている（[tumbler.poco](https://github.com/FairyDevicesRD/tumbler.poco)）ので、そちらを参照してください。
+libmimixfe はオープンソースとして提供されます。ビルド時には、Poco C++ library などが必要となります。Poco はプレビルドバイナリが github 上で公開されているので（[tumbler.poco](https://github.com/FairyDevicesRD/tumbler.poco)）、そちらを参照してください。
 
 
 
