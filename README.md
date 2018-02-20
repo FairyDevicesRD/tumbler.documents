@@ -16,7 +16,11 @@ Fairy I/O Tumbler は Raspberry Pi Compute Module を搭載し、Raspbian Stretc
 
 お持ちの Fairy I/O Tumbler のバージョンと同梱品を確認してください。先行出荷ロットの場合、プリインストールされているライブラリが古くなっている場合がありますので、このドキュメントに従ってライブラリ群を更新してください。
 
-### 2. ライブラリ構成
+### 2. ファームウェア
+
+ファームウェア [arduino](https://github.com/FairyDevicesRD/tumbler/tree/master/arduino) が古くなっている場合がありますので、ドキュメントに従って更新してください。
+
+### 3. ライブラリ構成
 
 #### libmimixfe
 
@@ -24,13 +28,19 @@ Fairy I/O Tumbler は Raspberry Pi Compute Module を搭載し、Raspbian Stretc
 
 libmimixfe は、Tumbler のハードウェア層からの信号を入力とし、設定に従った信号処理済の音声データが出力されます。この音声データを mimi(R) クラウドへ送信することで、音声認識などの結果を得ることができます。この信号処理済の音声を、mimi(R) クラウドではなく、サードパーティサービスに送信するプログラムを開発することで、サードパーティサービスを利用したシステムを構築することも可能です。
 
-libmimixfe はバイナリライブラリの形式で提供されます。利用時には、他のライブラリが必要となりますので、libmimixfe のドキュメントを参照してください。
+libmimixfe はバイナリライブラリの形式で提供されます。利用時には、他のライブラリが必要となりますので、libmimixfe のドキュメントを参照してください。サンプルプログラムの実行には libtumbler が必要です。
 
 #### libmimiio
 
 [libmimiio](https://github.com/FairyDevicesRD/libmimiio) は mimi(R) WebSocket API Service を実装したクライアント通信ライブラリで、音声データを入力とし、mimi(R) クラウドに音声データを送信し、音声認識などの結果を得ることができるライブラリです。WebSocket による双方向通信を利用することで、リアルタイムの音声データの送信と結果の受信が可能となります。
 
-libmimixfe はオープンソースとして提供されます。ビルド時には、Poco C++ library などが必要となります。Poco はプレビルドバイナリが github 上で公開されているので（[tumbler.poco](https://github.com/FairyDevicesRD/tumbler.poco)）、そちらを参照してください。
+libmimiio はオープンソースとして提供されます。ビルド時には、Poco C++ library などが必要となります。Poco はプレビルドバイナリが github 上で公開されているので（[tumbler.poco](https://github.com/FairyDevicesRD/tumbler.poco)）、そちらを参照してください。
+
+libmimixfe を利用したサンプルプログラムのビルドには libmimixfe 及び libtumbler が必要です。
+
+#### libtumbler
+
+[libtumbler](https://github.com/FairyDevicesRD/tumbler/tree/master/libtumbler) は Tumbler のハードウェア API が実装されたライブラリです。ドキュメントに従って、インストールしてください。
 
 
 
